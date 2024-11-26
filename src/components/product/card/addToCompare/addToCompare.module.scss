@@ -1,0 +1,32 @@
+.add_to_compare {
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--background-container);
+  //   font-size: 16px;
+  margin: 0 0 5px;
+  display: block;
+  border: 0;
+  line-height: 16px;
+
+  &::before {
+    display: flex;
+    content: "\F584";
+    font-family: "Bootstrap-icons";
+    color: var(--foreground-container);
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    text-align: center;
+    border-radius: 2px;
+    margin: 1px 0 0 1px;
+    width: 14px;
+    // height: 14px;
+    font-size: 14px;
+  }
+  &:hover::before {
+    color: #00c0da;
+    cursor: pointer;
+  }
+}
+

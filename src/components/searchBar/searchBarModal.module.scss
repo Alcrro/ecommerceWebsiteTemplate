@@ -1,0 +1,14 @@
+.hide {
+  display: none;
+}
+.show {
+  top: 100%;
+  left: 50%;
+  position: absolute;
+
+  transform: translate(-50%);
+
+  @media (min-width: 939px) {
+    display: none;
+  }
+}

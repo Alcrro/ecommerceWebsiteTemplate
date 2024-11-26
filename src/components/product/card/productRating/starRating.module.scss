@@ -1,0 +1,48 @@
+.card_rating {
+  padding: 10px 0;
+  letter-spacing: 2px;
+
+  .star-rating-container {
+    display: block;
+    text-decoration: none !important;
+  }
+
+  .star_rating {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: top;
+    line-height: 19px;
+    height: 19px;
+    font-size: 14px;
+
+    letter-spacing: 2px;
+    &::before {
+      display: inline-block;
+      position: relative;
+      content: "\F586\F586\F586\F586\F586";
+      font-family: "Bootstrap-icons";
+      color: #ccc;
+    }
+  }
+
+  .star_rating_inner {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    line-height: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+      display: inline-block;
+      position: relative;
+      content: "\F586\F586\F586\F586\F586";
+      font-family: "Bootstrap-icons";
+      color: #f9bf3b;
+    }
+  }
+}

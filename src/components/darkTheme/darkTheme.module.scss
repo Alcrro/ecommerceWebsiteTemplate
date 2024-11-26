@@ -1,0 +1,22 @@
+.dark_icon {
+  display: inline-block; /* Ensures it respects width/height settings */
+  width: 24px; /* Set the fixed width */
+  height: 24px; /* Set the fixed height */
+  background-color: transparent; /* Optional: Ensures no background is applied */
+  &::after {
+    display: inline-block; /* Ensures it respects width/height settings */
+    width: 24px; /* Set the fixed width */
+    height: 24px; /* Set the fixed height */
+    background-color: transparent; /* Optional: Ensures no background is applied */
+
+    content: "\F494";
+    font-family: "Bootstrap-icons";
+  }
+}
+
+.light_icon {
+  &::after {
+    content: "\F1D1";
+    font-family: "Bootstrap-icons";
+  }
+}

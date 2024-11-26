@@ -1,0 +1,28 @@
+.search_bar_icon {
+  margin-right: auto;
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+  @media (max-width: 220px) {
+    margin-right: unset;
+  }
+
+  &::after {
+    content: "\F52A";
+    font-family: "Bootstrap-icons";
+  }
+}
+.visible_icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+
+  &::after {
+    content: "\F52A";
+    font-family: "Bootstrap-icons";
+    color: var(--search-icon-color);
+  }
+}

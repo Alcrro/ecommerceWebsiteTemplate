@@ -1,0 +1,85 @@
+.brands_container {
+  background: black;
+  position: relative;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  // margin: 10px 0;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    // width: 100vw;
+    min-height: 69.5px;
+    background-color: black;
+    transform: translateX(calc((100vw - 78rem) / -2));
+    z-index: -1;
+
+    @media (min-width: 78rem) {
+      width: 100vw;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    justify-content: space-between; /* Center-align all items horizontally */
+    gap: 2rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 10px;
+
+    @media (max-width: 280px) {
+      display: block;
+      white-space: wrap;
+    }
+
+    @media (max-width: 440px) {
+      padding: 1rem 0.5rem;
+      text-wrap: wrap;
+      gap: 10px;
+    }
+
+    li {
+      font-size: 33px;
+      text-transform: uppercase;
+      text-align: center;
+      text-wrap: nowrap;
+      color: white;
+
+      @media (max-width: 604px) {
+        text-wrap: wrap;
+        &:nth-last-child(1n) {
+          flex: 1 1 25%;
+        }
+      }
+      @media (max-width: 800px) {
+        &:last-child {
+          flex: 1 1 25%;
+        }
+      }
+    }
+  }
+
+  .versace {
+    transform: translateY(5px); /* Adjust the value to your liking */
+    font-family: "VersaceFont";
+  }
+  .zara {
+    font-family: "ZaraFont";
+  }
+  .gucci {
+    font-family: "GucciFont";
+  }
+  .prada {
+    font-family: "PradaFont";
+  }
+  .calvin_klein {
+    font-family: "ckFont";
+    text-transform: capitalize;
+  }
+}
