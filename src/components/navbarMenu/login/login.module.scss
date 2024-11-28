@@ -1,0 +1,7 @@
+.login_menu_icon {
+  &::after {
+    content: "\F4D7";
+    font-family: "Bootstrap-icons";
+    font-size: 22px;
+  }
+}

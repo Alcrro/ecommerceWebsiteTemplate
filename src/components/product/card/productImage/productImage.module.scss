@@ -1,0 +1,33 @@
+.card_product_link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 1;
+
+  .product_image_container {
+    height: 0;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: static !important;
+    margin: 0 auto;
+
+    .image_icon {
+      max-width: 200px;
+      min-height: 220px;
+
+      // object-fit: contain;
+      margin: 0 auto;
+
+      @media (max-width: 239px) {
+        min-width: unset;
+        min-height: unset;
+      }
+    }
+  }
+}

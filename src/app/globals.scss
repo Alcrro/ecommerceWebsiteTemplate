@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "VersaceFont";
+  src: url("/assets/fonts/OPTIRadiant-Medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZaraFont";
+  src: url("/assets/fonts/OPTIBodoni-Antiqua.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GucciFont";
+  src: url("/assets/fonts/Granjon.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PradaFont";
+  src: url("/assets/fonts/Rosan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ckFont";
+  src: url("/assets/fonts/Klein-Web-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nwFont";
+  src: url("/assets/fonts/Fontspring-DEMO-integralcf-bold.otf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --search-icon-color: #727272;
+  --background-search-bar: #f5f5f5;
+  --brand-danger: #ef2809;
+}
+
+:root.dark {
+  --background: #1a1a1d;
+  --foreground: #fff;
+  --background-container: #000;
+  --foreground-container: #fff;
+  --border-color: #444444;
+  // --background-search-bar: #ffffff;
+  --card-shadow-color: 0 4px 16px -3px;
+  --box-shadow-product-card: var(--card-shadow-color) #ffffff40;
+  --text-search-bar: #000000;
+}
+
+:root.light {
+  --background: #eee;
+  --foreground: #000;
+  --background-container: #fff;
+  --foreground-container: #000;
+  --border-color: #d8d8d8;
+  --card-shadow-color: 0 4px 16px -3px;
+  --box-shadow-product-card: var(--card-shadow-color) #00000040;
+  // --background-search-bar: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  @media (max-width: 240px) {
+    word-break: break-all;
+    text-align: center;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  flex-direction: column;
+  max-width: 78rem;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+}

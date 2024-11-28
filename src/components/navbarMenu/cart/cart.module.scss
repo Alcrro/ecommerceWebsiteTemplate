@@ -1,0 +1,7 @@
+.cart_menu_icon {
+  &::after {
+    content: "\F243";
+    font-family: "Bootstrap-icons";
+    font-size: 22px;
+  }
+}

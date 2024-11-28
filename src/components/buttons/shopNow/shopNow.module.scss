@@ -1,0 +1,14 @@
+.shop_now {
+  border-radius: 62px;
+  background-color: #000;
+  color: #fff;
+  min-width: 210px;
+  width: 240px;
+  padding: 10px;
+
+  @media (max-width: 499px) {
+    min-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+  }
+}

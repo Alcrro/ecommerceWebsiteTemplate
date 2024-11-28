@@ -1,0 +1,27 @@
+.brands_analytics {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .analytics_numbers {
+    font-size: 54px;
+
+    @media (max-width: 640px) {
+      font-size: 8vw;
+    }
+    @media (max-width: 440px) {
+      font-size: 11vw;
+    }
+  }
+
+  span {
+    text-transform: capitalize;
+   
+  }
+}

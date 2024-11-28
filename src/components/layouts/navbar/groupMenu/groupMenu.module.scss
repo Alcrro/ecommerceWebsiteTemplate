@@ -1,0 +1,10 @@
+.group_menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  @media (max-width: 220px) {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

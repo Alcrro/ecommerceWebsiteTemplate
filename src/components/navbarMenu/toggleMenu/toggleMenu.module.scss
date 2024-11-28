@@ -1,0 +1,28 @@
+.toggle_menu_is_closed {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @media (min-width: 639px) {
+    display: none;
+  }
+
+  &::after {
+    content: "\F479";
+    font-family: "Bootstrap-icons";
+  }
+}
+
+.toggle_menu_is_opened {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  @media (min-width: 639px) {
+    display: none;
+  }
+
+  &::after {
+    content: "\F659";
+    font-family: "Bootstrap-icons";
+  }
+}

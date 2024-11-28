@@ -1,0 +1,26 @@
+.products_list {
+  display: block;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  // max-width: 577px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 4px;
+  border-radius: 12px;
+}
+
+.products_not_found {
+  display: block;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  // max-width: 577px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 4px;
+  border-radius: 12px;
+
+  text-align: center;
+  font-size: 12px;
+}

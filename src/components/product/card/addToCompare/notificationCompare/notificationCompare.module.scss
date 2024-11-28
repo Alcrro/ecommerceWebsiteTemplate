@@ -1,0 +1,69 @@
+.product_compare_notification {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: fixed;
+  top: 225px;
+  right: 45px;
+  background-color: var(--background-container);
+  padding: 4px;
+  border-radius: 12px;
+
+  @media (max-width: 1540px) {
+    position: relative;
+    top: unset;
+    right: unset;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 4px;
+    @media (max-width: 1540px) {
+      flex-direction: row;
+    }
+  }
+
+  .product_compare_notification_li {
+    position: relative;
+    display: block;
+    padding: 8px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+
+  .product_compare_notification_li:hover {
+    border: 1px solid;
+    border-radius: 8px;
+  }
+
+  img {
+    display: block;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.remove_button_from_compare {
+  position: absolute;
+  top: -12px;
+  right: -6px;
+  &::after {
+    content: "\F629";
+    font-family: "Bootstrap-icons";
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: #fff;
+    transform: scale(1.3);
+    text-decoration: none;
+  }
+}

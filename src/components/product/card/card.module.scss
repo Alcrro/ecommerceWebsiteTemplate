@@ -1,0 +1,94 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+  align-items: center;
+  padding: 5px;
+
+  @media (max-width: 239px) {
+    grid-template-columns: 100%;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 539px;
+    height: 100%;
+    border-radius: 12px;
+    padding: 1px;
+    background-color: var(--background-container);
+    -webkit-font-smoothing: antialiased;
+    line-height: 19px;
+
+    .card_wrapper {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: space-between;
+      transition: box-shadow 0.15s ease;
+
+      .card_info {
+        max-height: 400px;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card_content {
+        padding: 0 10px;
+      }
+    }
+
+    .button_container {
+      position: relative;
+      padding-top: 6px;
+      padding-bottom: 6px;
+
+      .cart_icon {
+        height: 32px;
+        width: 37px;
+        line-height: 32px;
+        font-size: 21.3333333333px;
+        border-radius: 4px;
+        padding-right: 5px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        display: block;
+        z-index: 1;
+        font-style: normal;
+        color: #fff;
+        background: #fe2d34;
+        border-top-right-radius: 0% !important;
+        border-bottom-right-radius: 37% 100% !important;
+
+        &::before {
+          content: "\F23D";
+          font-family: "Bootstrap-icons";
+          z-index: 2;
+          line-height: 30px;
+          font-size: 21px;
+        }
+      }
+
+      button {
+        position: relative;
+        width: 100%;
+        padding: 6px 10px;
+        font-size: 15px;
+        line-height: 20px;
+        border-radius: 4px;
+        background: linear-gradient(to right, #4a60c1 10%, #3985e0);
+        border-color: #005eb8;
+        color: white;
+      }
+    }
+
+    &:hover {
+      box-shadow: var(--box-shadow-product-card);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.navbar_menu_container {
+  // display: block;
+  @media (min-width: 639px) {
+    min-width: fit-content;
+  }
+  @media (max-width: 638px) {
+    display: none;
+  }
+
+  @media (max-width: 637px) {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-10px); // Start slightly above
+    width: 100%;
+    opacity: 0; // Fully transparent initially
+    visibility: hidden; // Hidden and not interactable by default
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0s 0.5s; // Visibility delayed to match animation
+  }
+  ul {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-container);
+
+    li {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.show {
+  @media (max-width: 639px) {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--background-container);
+    width: 100%;
+
+    z-index: 1;
+    transform: translateY(0); // Slide into place
+    opacity: 1; // Fully visible
+    visibility: visible; // Make interactable immediately
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0s; // Reset delay for showing
+
+    ul {
+      justify-content: center;
+      padding: 0.5rem 0;
+      align-items: center;
+      @media (max-width: 420px) {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      li {
+        text-align: center;
+      }
+    }
+  }
+}
