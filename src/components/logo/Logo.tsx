@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./logo.module.scss";
-import { fetchNavbarData } from "@/api/fetchNavbarDataApi";
+import { fetchNavbarData } from "@/api/fetchNavbarData";
+
 const Logo = async () => {
   const { logo } = await fetchNavbarData();
   return (

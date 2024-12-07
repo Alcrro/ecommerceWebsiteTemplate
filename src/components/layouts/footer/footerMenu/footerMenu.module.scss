@@ -1,0 +1,34 @@
+.footer_menu {
+  display: block;
+  padding: 8px 0;
+
+  position: relative;
+  width: 100vw; /* Stretch from 0 to 100% of the viewport width */
+  left: 50%; /* Align at the center */
+  transform: translateX(-50%); /* Shift back to span full width */
+  background: var(--background-container);
+
+  @media (max-width: 719px) {
+    width: 100%;
+    border-radius: 8px;
+    left: 0;
+    transform: unset;
+    margin: 10px 0;
+  }
+
+  .footer_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    // gap: 10px;
+    justify-content: space-between;
+    max-width: 78rem;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 719px) {
+      display: flex;
+      flex-direction: column;
+      text-align: unset;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.footer_group {
+  display: block;
+  // padding: 4px;
+
+  .footer_list_title {
+    display: block;
+    text-transform: uppercase;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+
+    @media (max-width: 719px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bolder;
+      text-transform: capitalize;
+      border-bottom: 1px solid var(--border-color);
+
+      &.rotate {
+        display: flex;
+        justify-content: space-between;
+        outline: 5px auto rgb(94, 158, 214);
+        outline-offset: -2px;
+        transition: outline 1.5s ease; /* Smooth height transition */
+
+        &::after {
+          content: "\F282";
+          font-family: "Bootstrap-icons";
+          transform: rotate(180deg);
+        }
+      }
+      &::after {
+        content: "\F282";
+        font-family: "Bootstrap-icons";
+      }
+    }
+  }
+
+  .footer_group_list {
+    @media (max-width: 719px) {
+      padding: 0 8px;
+    }
+    .github,
+    .linkedin {
+      display: inline-block;
+      font-family: "Bootstrap-icons";
+      padding: 0 5px;
+      font-size: 20px;
+    }
+
+    .github::after {
+      content: "\F3ED";
+    }
+    .linkedin::after {
+      content: "\F472";
+    }
+    li {
+      // margin-bottom: 10px;
+      text-transform: capitalize;
+      padding: 4px 0;
+
+      @media (max-width: 719px) {
+        border-bottom: 1px solid var(--border-color);
+      }
+      a {
+        font-size: 12px;
+        color: var(--foreground-container);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @media (max-width: 719px) {
+      overflow: hidden;
+      max-height: 0; /* Start collapsed */
+      transition: max-height 1.5s ease-in-out; /* Smooth height transition */
+
+      &.isOpened {
+        max-height: 600px; /* Large enough for all content */
+      }
+    }
+  }
+
+  &:first-child {
+    @media (max-width: 719px) {
+      display: none;
+    }
+  }
+  @media (max-width: 719px) {
+    cursor: pointer;
+  }
+}

@@ -2,24 +2,22 @@
 // AddToCartButton.tsx
 import React, { useState, CSSProperties } from "react";
 import DefaultButton from "../DefaultButton";
+import addToCart from "./addToCart.module.scss";
+import { IProductData } from "@/types/ProductsData.types";
+import { useAddToContext } from "@/contexts/AddToProvider";
 
-const AddToCartButton: React.FC = () => {
-  const [isAdded, setIsAdded] = useState(false);
-
-  // Specific styles for "Add to Cart"
-  const addToCartStyle: CSSProperties = {
-    border: "2px solid #f39c12", // Highlight border
-    backgroundColor: isAdded ? "#f39c12" : "#fff",
-    color: isAdded ? "#fff" : "#f39c12",
-  };
+const AddToCartButton = ({ product }: { product: IProductData }) => {
+  const { state, dispatch } = useAddToContext();
 
   return (
-    <DefaultButton
-      label={isAdded ? "Remove from Cart" : "Add to Cart"}
-      isActive={isAdded}
-      onClick={() => setIsAdded(!isAdded)}
-      style={addToCartStyle} // Apply additional styles
-    />
+    <div
+      className={addToCart.button_container}
+      onClick={() => dispatch({ type: "TOGGLE_CART", payload: product })}
+    >
+      <button>
+        <i className={addToCart.cart_icon}></i>Add to Cart
+      </button>
+    </div>
   );
 };
 

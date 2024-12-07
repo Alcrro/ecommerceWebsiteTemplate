@@ -1,5 +1,5 @@
-import { INavbarLogo } from "@/types/NavbarLogo";
-import { INavbarDataMenu } from "@/types/NavbarMenu";
+import { INavbarLogo } from "@/types/NavbarLogo.types";
+import { INavbarDataMenu } from "@/types/NavbarMenu.types";
 import { incrementalNumber } from "@/utils/incrementNumber";
 
 export interface INavbarData {

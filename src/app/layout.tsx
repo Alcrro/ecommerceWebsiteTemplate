@@ -1,22 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.scss";
-import { ToggleProvider } from "@/contexts/ToggleProvider";
-import DarkThemeProvider from "@/contexts/DarkThemeProvider";
-import SearchProductsProvider from "@/contexts/SearchProductsProvider";
 import ExtraRootLayout from "@/components/layouts/extraRootLayout/ExtraRootLayout";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { geistMono, geistSans } from "@/utils/fonts/LocalFonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",

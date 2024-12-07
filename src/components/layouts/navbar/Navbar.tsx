@@ -7,6 +7,7 @@ import Search from "@/components/navbarMenu/search/Search";
 import GroupMenu from "./groupMenu/GroupMenu";
 import DarkThemeToggle from "@/app/DarkThemeToggle";
 import NavbarMenu from "@/components/navbarMenu/navbarMenu/NavbarMenu";
+import FavoriteNotification from "@/components/navbarMenu/favorite/FavoriteNotification";
 
 const Navbar = () => {
   return (
@@ -18,6 +19,7 @@ const Navbar = () => {
         <Search iconEnabled={false} />
         {/* <SearchBarModal /> */}
         <DarkThemeToggle />
+        <FavoriteNotification />
         <Cart />
         <Login />
       </div>

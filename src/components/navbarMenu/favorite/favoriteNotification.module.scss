@@ -1,0 +1,68 @@
+.favorites_products {
+  position: fixed;
+  top: 60%;
+  right: 100px;
+  background-color: var(--background-container);
+  width: 60px;
+  z-index: 99;
+  padding: 0.5rem;
+  border-radius: 14px;
+
+  .down {
+    display: block;
+    // top: 40%;
+  }
+  &.up {
+    display: block;
+    top: 44%;
+  }
+
+  @media (max-width: 1600px) {
+    position: relative;
+    top: unset;
+    right: unset;
+    width: unset;
+    padding: unset;
+  }
+
+  &::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "\F417";
+    font-family: "Bootstrap-icons";
+    font-size: 28px;
+
+    @media (max-width: 1600px) {
+      font-size: 22px;
+    }
+  }
+
+  .jewel {
+    position: absolute;
+    top: 10px;
+
+    left: 50%;
+    z-index: 1;
+    font-size: 80%;
+    font-weight: 700;
+    line-height: 18px;
+    background: linear-gradient(to right, #cf3f50, #fe2d34);
+    vertical-align: middle;
+    min-width: 18px;
+    height: 18px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    border-radius: 9px;
+
+    @media (max-width: 1600px) {
+      top: -2px;
+    }
+    &::after {
+      display: flex;
+      content: "";
+      background: red;
+    }
+  }
+}

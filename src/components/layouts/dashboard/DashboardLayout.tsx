@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import Navbar from "../navbar/Navbar";
 import styles from "./dashboardLayout.module.scss";
 import Footer from "../footer/Footer";
+
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>

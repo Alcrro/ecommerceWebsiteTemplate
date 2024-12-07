@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "./brands.module.scss";
+import { ckFont, gucci, prada, versace, zara } from "@/utils/fonts/LocalFonts";
 
 const Brands = () => {
   return (
     <>
       <div className={styles.brands_container}>
         <ul>
-          <li className={styles.versace}>versace</li>
-          <li className={styles.zara}>zara</li>
-          <li className={styles.gucci}>gucci</li>
-          <li className={styles.prada}>prada</li>
-          <li className={styles.calvin_klein}>calvin klein</li>
+          <li className={versace.className}>versace</li>
+          <li className={zara.className}>zara</li>
+          <li className={gucci.className}>gucci</li>
+          <li className={prada.className}>prada</li>
+          <li className={ckFont.className}>calvin klein</li>
         </ul>
       </div>
     </>

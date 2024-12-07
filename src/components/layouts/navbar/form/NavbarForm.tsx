@@ -1,7 +1,7 @@
 "use client";
-import { getProductsData } from "@/consts/productsData";
+import { getProductsData } from "@/api/fetchProductData";
 import { useSearchFilteredProducts } from "@/contexts/SearchProductsProvider";
-import { IProductData } from "@/types/ProductsData";
+import { ProductFilter } from "@/types/ProductFilter.types";
 import React, { useEffect, useState } from "react";
 
 interface SearchBarProps {
@@ -27,7 +27,7 @@ const NavbarForm = () => {
   // Fetch filtered products when the query changes
   useEffect(() => {
     const fetchProducts = async () => {
-      const products = await getProductsData(debouncedQuery);
+      const products = await getProductsData(debouncedQuery as ProductFilter);
       setSearchFilteredProducts(products);
     };
 

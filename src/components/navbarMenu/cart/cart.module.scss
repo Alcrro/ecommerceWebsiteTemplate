@@ -1,4 +1,5 @@
 .cart_menu_icon {
+  position: relative;
   &::after {
     content: "\F243";
     font-family: "Bootstrap-icons";

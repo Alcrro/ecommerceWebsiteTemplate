@@ -1,0 +1,77 @@
+.customers_declaration_container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 78rem; /* Limit to 78rem */
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.carousel_track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 1rem; /* Add spacing between cards */
+}
+
+.customer_declaration_container {
+  flex: 0 0 calc(100% / 3 - 1rem); /* Show 3 items by default, adjusting for gap */
+  box-sizing: border-box;
+  // background: #f9f9f9; /* Add background for clarity */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 320px) {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+.customer_declaration_name {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.customer_declaration_comment {
+  margin-top: 4px;
+  color: #555;
+}
+
+.carousel_controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel_button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10;
+  outline: none;
+  border-radius: 4px;
+
+  &.disabled {
+    pointer-events: none;
+    background-color: #55555515;
+    color: #55555515;
+  }
+}
+
+.carousel_button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .customer_declaration_container {
+    flex: 0 0 calc(100% / 2 - 1rem); /* Show 2 items for smaller screens */
+  }
+}

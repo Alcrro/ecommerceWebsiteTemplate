@@ -1,0 +1,12 @@
+.new_arrivals {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  justify-content: flex-start;
+  //   height: 100%; /* Full height of the parent container */
+  transition: all 0.3s ease; /* Smooth transition */
+  gap: 10px;
+
+  &.expanded {
+    height: 1600px;
+  }
+}

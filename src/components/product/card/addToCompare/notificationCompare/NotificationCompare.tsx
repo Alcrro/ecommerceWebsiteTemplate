@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 const NotificationCompare = () => {
   const { state, dispatch } = useAddToContext();
-  console.log(state.compare.length > 0);
 
   return (
     <div
@@ -19,7 +18,7 @@ const NotificationCompare = () => {
           <li key={item.id} className={styles.product_compare_notification_li}>
             <Link href={""}>
               <Image
-                src={`/assets/images/products/${item.image}`}
+                src={`/assets/images/products/${item.thumbnail}`}
                 alt=""
                 width={1000}
                 height={1000}

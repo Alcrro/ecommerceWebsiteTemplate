@@ -1,0 +1,20 @@
+.category_modal {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  justify-content: flex-start;
+  //   height: 100%; /* Full height of the parent container */
+  transition: all 0.3s ease; /* Smooth transition */
+  gap: 10px;
+
+  max-height: 100%;
+  transition: max-height 1.5s ease-in-out;
+  &.new_arrive_view_more,
+  &.product_watched_by_you_view_more,
+  &.best_selling_view_more {
+    &.expanded {
+      min-height: 100%;
+      height: 1600px;
+      transition: min-height 1.5s ease-in-out;
+    }
+  }
+}

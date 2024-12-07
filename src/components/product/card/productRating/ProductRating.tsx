@@ -1,8 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./starRating.module.scss";
-import { IProductData } from "@/types/ProductsData";
-const ProductRating = ({ product }: { product: IProductData }) => {
+import { IProductData } from "@/types/ProductsData.types";
+
+const ProductRating = ({ rating }: { rating: number }) => {
   function calculateStarWidth(
     totalStars: number,
     starsToCalculate: number
@@ -18,7 +19,7 @@ const ProductRating = ({ product }: { product: IProductData }) => {
           <div
             className={styles.star_rating_inner}
             style={{
-              width: `${calculateStarWidth(5, Number(product.rating))}%`,
+              width: `${calculateStarWidth(5, rating)}%`,
             }}
           ></div>
         </div>

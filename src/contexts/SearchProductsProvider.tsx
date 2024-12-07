@@ -1,5 +1,5 @@
 "use client";
-import { IProductData } from "@/types/ProductsData";
+import { IProductData } from "@/types/ProductsData.types";
 import React, {
   createContext,
   Dispatch,

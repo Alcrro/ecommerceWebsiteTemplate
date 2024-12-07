@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./addToCompare.module.scss";
-import { IProductData } from "@/types/ProductsData";
+import { IProductData } from "@/types/ProductsData.types";
 import { useAddToContext } from "@/contexts/AddToProvider";
 import { usePathname } from "next/navigation";
 

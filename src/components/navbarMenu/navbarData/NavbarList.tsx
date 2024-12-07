@@ -1,5 +1,4 @@
-import { fetchNavbarData } from "@/api/fetchNavbarDataApi";
-
+import { fetchNavbarData } from "@/api/fetchNavbarData";
 import Link from "next/link";
 import React from "react";
 

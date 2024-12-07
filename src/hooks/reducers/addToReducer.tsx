@@ -1,4 +1,4 @@
-import { IProductData } from "@/types/ProductsData";
+import { IProductData } from "@/types/ProductsData.types";
 
 // Define state type
 export interface AppState {
@@ -22,8 +22,6 @@ export const reducer = (state: AppState, action: AppAction): AppState => {
   switch (action.type) {
     case "TOGGLE_FAVORITE": {
       const { payload } = action;
-      console.log("Current favorites:", state.favorites);
-      console.log("Payload:", payload);
 
       const isAlreadyFavorited = state.favorites.some(
         (item) => item.id === payload.id

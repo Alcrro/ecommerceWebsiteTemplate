@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./addToFavorite.module.scss";
-import { IProductData } from "@/types/ProductsData";
+import { IProductData } from "@/types/ProductsData.types";
 import { useAddToContext } from "@/contexts/AddToProvider";
 
 const AddToFavorite = ({ product }: { product: IProductData }) => {
